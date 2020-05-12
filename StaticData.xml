@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<StaticDataList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Version>2</Version>
+  <StaticDataLinks>
+    <StaticDataLink>dbo.city</StaticDataLink>
+    <StaticDataLink>dbo.crime</StaticDataLink>
+    <StaticDataLink>dbo.prisoner</StaticDataLink>
+    <StaticDataLink>dbo.punishment</StaticDataLink>
+    <StaticDataLink>dbo.users</StaticDataLink>
+  </StaticDataLinks>
+</StaticDataList>
