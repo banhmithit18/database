@@ -10,6 +10,7 @@
   [punishment] [int] NULL,
   [address] [nvarchar](50) NULL,
   [city] [int] NULL,
+  [country] [int] NULL,
   PRIMARY KEY CLUSTERED ([prisonerid])
 )
 ON [PRIMARY]
@@ -17,6 +18,10 @@ GO
 
 ALTER TABLE [dbo].[prisoner]
   ADD CONSTRAINT [FK_prisoner_city] FOREIGN KEY ([city]) REFERENCES [dbo].[city] ([cityid])
+GO
+
+ALTER TABLE [dbo].[prisoner]
+  ADD CONSTRAINT [FK_prisoner_country] FOREIGN KEY ([country]) REFERENCES [dbo].[country] ([countryid])
 GO
 
 ALTER TABLE [dbo].[prisoner]
