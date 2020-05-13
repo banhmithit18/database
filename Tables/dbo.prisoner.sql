@@ -2,7 +2,7 @@
   [prisonerid] [int] IDENTITY,
   [prisonername] [nvarchar](40) NULL,
   [prisonerage] [int] NULL,
-  [gender] [bit] NULL,
+  [gender] [nvarchar](10) NULL,
   [phone] [varchar](20) NULL,
   [dateofbirth] [datetime] NULL,
   [dateofarrest] [datetime] NULL,
