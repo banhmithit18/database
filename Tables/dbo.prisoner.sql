@@ -1,6 +1,7 @@
 ﻿CREATE TABLE [dbo].[prisoner] (
   [prisonerid] [int] IDENTITY,
   [prisonername] [nvarchar](40) NULL,
+  [prisonerage] [int] NULL,
   [gender] [bit] NULL,
   [phone] [varchar](20) NULL,
   [dateofbirth] [datetime] NULL,
