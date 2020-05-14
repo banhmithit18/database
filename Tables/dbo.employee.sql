@@ -7,6 +7,7 @@
   [employeeaddress] [nvarchar](60) NULL,
   [city] [int] NULL,
   [country] [int] NULL,
+  [salary] [float] NULL,
   [manager] [int] NULL,
   [area] [int] NULL,
   PRIMARY KEY CLUSTERED ([employeeid])
