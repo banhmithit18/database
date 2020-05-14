@@ -3,17 +3,21 @@
   [prisonername] [nvarchar](40) NULL,
   [prisonerage] [int] NULL,
   [gender] [nvarchar](10) NULL,
-  [phone] [varchar](20) NULL,
   [dateofbirth] [datetime] NULL,
   [dateofarrest] [datetime] NULL,
   [crime] [int] NULL,
   [punishment] [int] NULL,
+  [cellroom] [int] NULL,
   [address] [nvarchar](50) NULL,
   [city] [int] NULL,
   [country] [int] NULL,
   PRIMARY KEY CLUSTERED ([prisonerid])
 )
 ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[prisoner]
+  ADD CONSTRAINT [FK_prisoner_cellroom] FOREIGN KEY ([cellroom]) REFERENCES [dbo].[cellroom] ([cellroomid])
 GO
 
 ALTER TABLE [dbo].[prisoner]
