@@ -17,3 +17,23 @@
 )
 ON [PRIMARY]
 GO
+
+ALTER TABLE [dbo].[prisonerhistory]
+  ADD CONSTRAINT [FK_prisonerhistory_cellroom] FOREIGN KEY ([cellroom]) REFERENCES [dbo].[cellroom] ([cellroomid])
+GO
+
+ALTER TABLE [dbo].[prisonerhistory]
+  ADD CONSTRAINT [FK_prisonerhistory_city] FOREIGN KEY ([city]) REFERENCES [dbo].[city] ([cityid])
+GO
+
+ALTER TABLE [dbo].[prisonerhistory]
+  ADD CONSTRAINT [FK_prisonerhistory_country] FOREIGN KEY ([country]) REFERENCES [dbo].[country] ([countryid])
+GO
+
+ALTER TABLE [dbo].[prisonerhistory]
+  ADD CONSTRAINT [FK_prisonerhistory_crime] FOREIGN KEY ([crime]) REFERENCES [dbo].[crime] ([crimeid])
+GO
+
+ALTER TABLE [dbo].[prisonerhistory]
+  ADD CONSTRAINT [FK_prisonerhistory_punishment] FOREIGN KEY ([punishment]) REFERENCES [dbo].[punishment] ([punishmentid])
+GO

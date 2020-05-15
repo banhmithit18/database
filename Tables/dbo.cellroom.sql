@@ -1,5 +1,6 @@
 ﻿CREATE TABLE [dbo].[cellroom] (
   [cellroomid] [int] IDENTITY,
+  [cellroomname] [nvarchar](30) NULL,
   [cellroomtype] [int] NULL,
   [area] [int] NULL,
   PRIMARY KEY CLUSTERED ([cellroomid])
