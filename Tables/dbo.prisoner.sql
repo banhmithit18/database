@@ -25,21 +25,5 @@ ALTER TABLE [dbo].[prisoner]
 GO
 
 ALTER TABLE [dbo].[prisoner]
-  ADD CONSTRAINT [FK_prisoner_city] FOREIGN KEY ([city]) REFERENCES [dbo].[city] ([cityid])
-GO
-
-ALTER TABLE [dbo].[prisoner]
-  ADD CONSTRAINT [FK_prisoner_country] FOREIGN KEY ([country]) REFERENCES [dbo].[country] ([countryid])
-GO
-
-ALTER TABLE [dbo].[prisoner]
-  ADD CONSTRAINT [FK_prisoner_crime] FOREIGN KEY ([crime]) REFERENCES [dbo].[crime] ([crimeid])
-GO
-
-ALTER TABLE [dbo].[prisoner]
-  ADD CONSTRAINT [FK_prisoner_punishment] FOREIGN KEY ([punishment]) REFERENCES [dbo].[punishment] ([punishmentid])
-GO
-
-ALTER TABLE [dbo].[prisoner]
   ADD CONSTRAINT [FK_prisoner_relative] FOREIGN KEY ([relative]) REFERENCES [dbo].[relative] ([relativeid])
 GO
