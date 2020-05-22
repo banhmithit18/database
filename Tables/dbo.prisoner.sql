@@ -6,6 +6,7 @@
   [gender] [nvarchar](10) NULL,
   [dateofbirth] [datetime] NULL,
   [dateofarrest] [datetime] NULL,
+  [dateofrelease] [datetime] NULL,
   [crime] [int] NULL,
   [dangerlevel] [tinyint] NULL,
   [punishment] [int] NULL,

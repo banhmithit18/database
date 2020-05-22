@@ -6,7 +6,7 @@ as
 begin
 select relativeidcard,relativename,relativeage,relativephone ,relativeaddress,cityname,countryname,relationship
 from relative join city on city = cityid
-join country on country = countryid
+join country on relative.country = countryid
 where relativeidcard = @idcard
 end
 GO
