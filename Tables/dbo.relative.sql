@@ -8,6 +8,7 @@
   [city] [int] NULL,
   [country] [int] NULL,
   [relationship] [nvarchar](30) NULL,
+  [prisonerid] [int] NULL,
   PRIMARY KEY CLUSTERED ([relativeid]),
   UNIQUE ([relativeidcard])
 )

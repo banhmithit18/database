@@ -14,7 +14,6 @@
   [address] [nvarchar](50) NULL,
   [city] [int] NULL,
   [country] [int] NULL,
-  [relative] [int] NULL,
   PRIMARY KEY CLUSTERED ([prisonerid]),
   UNIQUE ([prisoneridcard])
 )
@@ -23,8 +22,4 @@ GO
 
 ALTER TABLE [dbo].[prisoner]
   ADD CONSTRAINT [FK_prisoner_cellroom] FOREIGN KEY ([cellroom]) REFERENCES [dbo].[cellroom] ([cellroomid])
-GO
-
-ALTER TABLE [dbo].[prisoner]
-  ADD CONSTRAINT [FK_prisoner_relative] FOREIGN KEY ([relative]) REFERENCES [dbo].[relative] ([relativeid])
 GO
