@@ -1,10 +1,10 @@
 ﻿SET QUOTED_IDENTIFIER, ANSI_NULLS ON
 GO
-Create proc [dbo].[findrelativebyidcard]
+CREATE proc [dbo].[findrelativebyidcard]
 @idcard varchar(20)
 as
 begin
-select relativeidcard,relativename,relativeage,relativephone ,relativeaddress,cityname,countryname,relationship
+select relativeidcard,relativename,relativeage,relativephone ,relativeaddress,cityname,countryname,relationship,prisonerid
 from relative join city on city = cityid
 join country on relative.country = countryid
 where relativeidcard = @idcard

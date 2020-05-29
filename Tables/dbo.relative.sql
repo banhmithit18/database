@@ -14,3 +14,14 @@
 )
 ON [PRIMARY]
 GO
+
+SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+create trigger [dbo].[updateIdSeed] on [relative]
+for update as
+declare @max int
+select @max =max(relativeid) from relative
+if @max is null
+set @max = 0
+dbcc checkident (relative,reseed,@max)
+GO

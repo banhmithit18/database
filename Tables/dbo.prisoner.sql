@@ -20,6 +20,17 @@
 ON [PRIMARY]
 GO
 
+SET QUOTED_IDENTIFIER, ANSI_NULLS ON
+GO
+create trigger [dbo].[updateIdSeedPrisoner] on [prisoner]
+for update as
+declare @max int
+select @max =max(relativeid) from relative
+if @max is null
+set @max = 0
+dbcc checkident (relative,reseed,@max)
+GO
+
 ALTER TABLE [dbo].[prisoner]
   ADD CONSTRAINT [FK_prisoner_cellroom] FOREIGN KEY ([cellroom]) REFERENCES [dbo].[cellroom] ([cellroomid])
 GO
