@@ -7,9 +7,5 @@ ON [PRIMARY]
 GO
 
 ALTER TABLE [dbo].[visitschedule]
-  ADD CONSTRAINT [FK_visitschedule_prisoner] FOREIGN KEY ([prisonerid]) REFERENCES [dbo].[prisoner] ([prisonerid])
-GO
-
-ALTER TABLE [dbo].[visitschedule]
   ADD CONSTRAINT [FK_vistschedule_visitor] FOREIGN KEY ([visitorid]) REFERENCES [dbo].[visitor] ([visitorid])
 GO
